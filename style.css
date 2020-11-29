@@ -12,20 +12,67 @@ html{
 }
 
 body{
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-family: 'Montserrat', sans-serif;
   color: black;
 }
 
-h1, h2, h3, h4, h5, h6{
+a{
+  color: black;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, nav a, .hero-text p{
   font-family: 'Libre Baskerville', serif;
   text-transform: uppercase;
+}
+
+h2{
+  font-size: 7rem;
+  line-height: 9rem;
+}
+
+button{
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #f1f1f1;
+  color: #161f2a;
+  font-family: 'Libre Baskerville',serif;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 1rem 3rem;
+  border: 1px solid black;
+}
+
+button:hover,
+button:focus{
+    background: #161f2a;
+    color: #f1f1f1;
+}
+
+button:focus{
+    outline: 1px solid #f1f1f1;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
 }
 
 nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1.5rem;
 }
 
 .hamburger{
@@ -38,18 +85,33 @@ nav{
   margin-bottom: 2px;
 }
 
-.nav-links{
+.nav-links, .nav-icons{
   list-style: none;
 }
 
-.nav-links li{
+nav li{
   display: inline-block;
+  margin-right: 3rem;
 }
 
-.hero{
+.nav-icons img{
+  width: 2rem;
+}
+
+.hero-container{
   background: url("hero-banner-hair.jpg");
   background-position: right;
   background-size: cover;
-  height: 95vh;
+  height: 80vh;
+  padding: 10%;
+}
 
+.hero-text{
+  width: 60%;
+  color: white;
+}
+
+.hero-text p{
+  letter-spacing: 0.3rem;
+  margin-bottom: 2rem;
 }
